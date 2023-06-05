@@ -1,5 +1,8 @@
-/* Variables */
+/********************************************/
+/* CUSTOM PROPERTIES */
+/********************************************/
 :root {
+  /* Color properties */
   --color-primary: #13183f;
   --color-primary-light: #666ca3;
   --color-secondary: #f74780;
@@ -10,9 +13,24 @@
   --gradient-secondary: linear-gradient(to bottom, #ff6f48, #f02aa6);
   --gradient-light: linear-gradient(to bottom, #fff, #f0f1ff);
 
+  /* Font properties */
   --font-body: 'Plus Jakarta Sans', sans-serif;
+  --heading-xl-fs: 5.6rem;
+  --heading-xl-lh: 7rem;
+  --heading-lg-fs: 4rem;
+  --heading-lg-lh: 5.1rem;
+  --heading-md-fs: 3.2rem;
+  --heading-md-lh: 4rem;
+  --heading-sm-fs: 2.4rem;
+  --heading-sm-lh: 2.8rem;
+  --body-md: 1.8rem;
+  --body-sm: 1.6rem;
+  --body-lh: 2.8rem;
 }
 
+/********************************************/
+/* BASIC RESET */
+/********************************************/
 *,
 *::before,
 *::after {
@@ -28,9 +46,9 @@ html {
 body {
   color: var(--color-grey);
   font-family: var(--font-body);
-  font-size: 1.6rem;
+  font-size: var(--body-sm);
   font-weight: 500;
-  line-height: 2.8rem;
+  line-height: var(--body-lh);
 }
 
 img,
@@ -49,6 +67,29 @@ button {
 /********************************************/
 /* TYPOGRAPHY */
 /********************************************/
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.h1 {
+  font-size: var(--heading-lg-fs);
+  line-height: var(--heading-lg-lh);
+}
+
+.h2 {
+  font-size: var(--heading-sm-fs);
+  line-height: var(--heading-sm-lh);
+}
+
+.h3 {
+  font-size: 2rem;
+}
 
 /********************************************/
 /* LAYOUT & GRID */
@@ -151,6 +192,24 @@ button {
   color: var(--color-grey-light);
 }
 
+.btn-link:link,
+.btn-link:visited {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-decoration: none;
+  display: inline-block;
+  color: var(--color-secondary);
+  transition: all 0.3s ease;
+}
+
+.btn-link:hover,
+.btn-link:active {
+  color: var(--color-grey-light);
+}
+
 /********************************************/
 /* UTILS */
 /********************************************/
@@ -169,6 +228,29 @@ button {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  body {
+    font-size: var(--body-md);
+  }
+
+  .h1 {
+    font-size: var(--heading-xl-fs);
+    line-height: var(--heading-xl-lh);
+  }
+
+  .h2 {
+    font-size: var(--heading-md-fs);
+    line-height: var(--heading-md-lh);
+  }
+
+  .h3 {
+    font-size: var(--heading-sm-fs);
+    line-height: var(--heading-sm-lh);
+  }
+
+  .btn {
+    font-size: 1.8rem;
+    padding: 1.9rem 3.2rem;
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
