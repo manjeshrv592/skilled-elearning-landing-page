@@ -95,6 +95,27 @@ button {
 /* LAYOUT & GRID */
 /********************************************/
 
+/* Container */
+.container {
+  width: 100%;
+  max-width: 120rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer */
+.footer {
+  padding-top: 3.6rem;
+  padding-bottom: 3.6rem;
+  background-color: var(--color-primary);
+}
+
+.footer-logo {
+  width: 9rem;
+}
+
 /********************************************/
 /* COMPONENTS */
 /********************************************/
@@ -214,6 +235,19 @@ button {
 /* UTILS */
 /********************************************/
 
+/* Flex */
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
 /**************************************/
 /* Responsive styling */
 /**************************************/
@@ -224,6 +258,10 @@ button {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -250,6 +288,10 @@ button {
   .btn {
     font-size: 1.8rem;
     padding: 1.9rem 3.2rem;
+  }
+
+  .footer-logo {
+    width: 11.4rem;
   }
 }
 
