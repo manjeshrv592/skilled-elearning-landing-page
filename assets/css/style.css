@@ -73,7 +73,6 @@ button {
 .h4,
 .h5,
 .h6 {
-  color: var(--color-primary);
   font-weight: 800;
 }
 
@@ -105,6 +104,18 @@ button {
   margin-right: auto;
 }
 
+/* Section courses */
+.section-courses {
+  padding-bottom: 8rem;
+  background-image: var(--gradient-light);
+}
+
+.courses-grid {
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  display: grid;
+  grid-gap: 4rem;
+}
+
 /* Footer */
 .footer {
   padding-top: 3.6rem;
@@ -119,6 +130,49 @@ button {
 /********************************************/
 /* COMPONENTS */
 /********************************************/
+
+/* Banner */
+.banner {
+  border-radius: 1rem;
+  color: var(--color-white);
+  background-image: var(--gradient-secondary);
+  padding: 2.8rem;
+}
+
+/* Course card */
+.course-card {
+  padding: 5.6rem 2.8rem 3.2rem 2.8rem;
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  box-shadow: 0 2.5rem 5rem rgba(6, 22, 141, 0.04);
+  position: relative;
+  display: grid;
+  grid-template-rows: max-content max-content 1fr;
+  grid-gap: 1.6rem;
+}
+
+.course-card-icon {
+  display: inline-block;
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  background-image: var(--gradient-secondary);
+  position: absolute;
+  top: 0;
+  left: 2.8rem;
+  transform: translateY(-50%);
+}
+
+.course-card-title {
+  color: var(--color-primary);
+}
+
+.course-card-text {
+}
+
+.course-card-link {
+  align-self: end;
+}
 
 /* Buttons */
 .btn,
@@ -248,12 +302,21 @@ button {
   align-items: center;
 }
 
+/* Color */
+.text-primary {
+  color: var(--color-primary);
+}
+
 /**************************************/
 /* Responsive styling */
 /**************************************/
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  .courses-grid {
+    column-gap: 1.2rem;
+    row-gap: 3.2rem;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -261,6 +324,19 @@ button {
   .container {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .banner {
+    padding: 5.6rem 3.2rem;
+  }
+
+  .course-card {
+    padding: 3.2rem;
+    padding-top: 5.6rem;
+  }
+
+  .course-card-icon {
+    left: 3.2rem;
   }
 }
 
@@ -285,9 +361,33 @@ button {
     line-height: var(--heading-sm-lh);
   }
 
+  .courses-grid {
+    column-gap: 3rem;
+    row-gap: 8rem;
+  }
+
+  .banner {
+    padding: 6.4rem 3.2rem;
+  }
+
+  .course-card {
+    padding: 4rem;
+    padding-top: 6.4rem;
+    border-radius: 1.5rem;
+    grid-gap: 2.4rem;
+  }
+
+  .course-card-icon {
+    left: 4rem;
+  }
+
   .btn {
     font-size: 1.8rem;
     padding: 1.9rem 3.2rem;
+  }
+
+  .section-courses {
+    padding-bottom: 14rem;
   }
 
   .footer-logo {
