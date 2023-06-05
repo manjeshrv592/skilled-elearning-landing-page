@@ -104,6 +104,15 @@ button {
   margin-right: auto;
 }
 
+/* Header */
+.header {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  margin-bottom: 2.2rem;
+}
+
+/* Section hero */
+
 /* Section courses */
 .section-courses {
   padding-bottom: 8rem;
@@ -123,7 +132,8 @@ button {
   background-color: var(--color-primary);
 }
 
-.footer-logo {
+.footer-logo,
+.header-logo {
   width: 9rem;
 }
 
@@ -307,6 +317,11 @@ button {
   color: var(--color-primary);
 }
 
+/* Height */
+.height-100 {
+  height: 100%;
+}
+
 /**************************************/
 /* Responsive styling */
 /**************************************/
@@ -324,6 +339,11 @@ button {
   .container {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .header {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
   }
 
   .banner {
@@ -390,7 +410,8 @@ button {
     padding-bottom: 14rem;
   }
 
-  .footer-logo {
+  .footer-logo,
+  .header-logo {
     width: 11.4rem;
   }
 }
